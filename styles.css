@@ -1,0 +1,283 @@
+/****************************************
+  Inherited Syles
+*****************************************/
+
+/*
+See this explanation for details
+https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+*/
+
+html {
+    box-sizing: border-box;
+    color: #444;
+    font: 12pt 'Open Sans', Arial;
+    font-weight: normal;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+    color: inherit;
+    font: inherit;
+}
+
+
+/****************************************
+  Defaults
+*****************************************/
+
+/****************************************
+  Helpers
+*****************************************/
+
+
+/****************************************
+  Layout
+*****************************************/
+.hero-header input {
+	background: none;
+	border: solid 2px rgba(255, 255, 255, .5);	
+
+}
+
+.hero-header p {
+	padding-bottom: 8px;
+}
+
+.hero-nav a {
+	text-align: center;
+	text-decoration: none;
+	color: white;
+	margin-left: 25px;
+	margin-right: 25px;
+}
+
+.heroSearch-form button {
+	background-color: #EF4B1D;
+	color: white;
+	border: none;
+	border-radius: 3px;
+}
+.hero-header {
+	height: 100px;
+	position: relative;
+}
+
+.hero-header > a {
+	color: white;
+	display: block;
+	text-align: left;
+	text-decoration: none;
+	margin-bottom: 20px;
+	font-family: Lobster;
+	font-size: 3em;
+	top: 2px;
+	left: 3px;
+}
+
+.hero-nav {
+	color: rgba(255, 255, 255, .5);
+	bottom:0;
+	width: 100%;
+	padding: 23px 0;
+	border-top: solid 1px;
+	border-bottom: solid 1px;
+	
+}
+.primary-info {
+	/*background-color: #00801a;*/
+	padding: 10px;
+	min-height: 150px;
+	position: relative;
+	margin-top: -40px;
+	text-align: center;
+}
+.hero {
+	background-color: #00abb9;
+	background: radial-gradient(rgba(3, 142, 168, .5),
+		rgba(3, 142,168, 1)),url('images/bg.jpg');
+	background-size: cover;
+	padding: 10px;
+	position: relative;	
+}
+
+
+.hero > div {
+	width: 960px;
+	margin: 0 auto;
+	text-align: center;
+	min-height: 500px;
+}
+
+.hero-mission {
+	position: absolute;
+	color: white;
+	font-family: 'Open Sans', sans-serif;
+	bottom: 5px;
+	width: 960px;
+    margin-bottom: 26px;
+}
+
+.heroSearch-form {
+	position: absolute;
+	top:5px;
+	right: 0;
+	
+}
+
+.primary-content {
+	background-color: #d6e1e7;
+	padding: 10px;
+
+}
+
+.primary-content > div{
+	background-color: #d6e1e7;
+	width: 960px;
+	margin: 0 auto;
+	text-align: center;
+	min-height: 900px;
+}
+
+.breakout {
+	background-color: white;
+	border-top: solid 4px;
+	padding: 10px 5px;
+	width: 300px;
+	display: inline-block;
+	margin: 5px;
+	box-shadow: 1px -1px 5px #888888
+}
+
+.breakout h4 {
+	padding: 0;
+	margin: 0;
+}
+
+.breakout1 {
+	border-color: #E84F23;
+}
+
+.breakout1 button {
+	border-radius: 5px;
+	color: #E84F23;
+	background: none;
+    outline: none;
+    border: solid 3px #E84F23;
+}
+
+.breakout2 {
+	border-color: #81D053;
+}
+
+.breakout2 button {
+	border-radius: 5px;
+	color: #81D053;
+	background: none;
+    outline: none;
+    border: solid 3px #81D053;
+}
+.breakout3 {
+	border-color: #0391CD;
+}
+
+.breakout3 button {
+	border-radius: 5px;
+	color: #0391CD;
+	background: none;
+	outline: none;
+    border: solid 3px #0391CD;
+
+}
+/****************************************
+  bottom layout with tiles
+*****************************************/
+
+.dog-display {
+	display: flex;
+    box-shadow: 2px 2px 5px #888888;
+}
+.k9 {
+	background-color: white;
+	/*min-height: 150px;*/
+	width: 420px;
+	/*padding: 10px;*/
+}
+
+.k9Tile-section {
+	background-color: white;
+	padding-left: 15px;
+	flex: 1;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+/****************************************
+  aside
+*****************************************/
+/*k9-box component*/
+.k9-box {
+	display: flex;
+	padding: 10px;
+
+}
+
+
+
+.k9-box .k9-pic {
+	background-size: cover;
+	height: 100px;
+	width: 100px;
+	
+}
+
+
+.k9-box .k9-content {
+	background-color: #e7f3f9;
+	flex: 2;
+	text-align: left;
+
+}
+
+.k9-box .k9-content div {
+	padding: 8px
+}
+
+.k9-box .k9-content div:first-child {
+	color: #1D87C9;
+}
+/****************************************
+ 	tiles
+*****************************************/
+/*k9Tilesection component*/
+
+
+.k9Tile-section .k9-tiles {
+	margin: 10px 5px;
+    width: calc(33.33% - 10px);
+}
+
+.k9Tile-section .k9Tile-pic {
+	background-size: cover;
+	height: 150px;
+	width: 150px;
+	border: 0;	
+}
+
+.k9Tile-section .k9Tile-content {
+	background-color: #fcff3f;
+	text-align: left;
+	width: 150px;
+	vertical-align: top;
+	/*border-top: 0;*/	
+}
+
+.k9Tile-section .k9Tile-content div:first-child{
+	background:#84D251;
+	color: #3C7627;
+	padding: 4px;
+}
+.k9Tile-section .k9Tile-content div:last-child {
+	background-color: #E1F0D7;
+	color: #2F5900;
+	padding: 4px;
+}
